@@ -29,16 +29,14 @@
 
 ![Image](CSE15_Lab1_SC2.jpg)
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 **SCORE:**
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 **3. This is the third step for `cd`, `ls`, and `cat` with a path to a file as an argument.**
