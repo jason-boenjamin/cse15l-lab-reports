@@ -29,13 +29,12 @@
 
 ![Image](CSE15_Lab1_SC2.jpg)
 
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 **SCORE:**
 
