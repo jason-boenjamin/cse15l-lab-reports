@@ -13,9 +13,9 @@
 
 ![Image](CSE15_Lab1_SC1.jpg)
 
-**SCORE:**
-
-
+**SCORE:**  
+  
+  
 **2. This is the second step for `cd`, `ls`, and `cat` with a path to a directory as an argument.**
 **The working directory for this problem is `/home`**
 
