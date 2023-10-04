@@ -29,20 +29,13 @@
 
 3. **This is the third step for `cd`, `ls`, and `cat` with a path to a file as an argument.**
 **The working directory for this problem is `/home/lecture1`**
-* sadfasdf
-  - asdfa
-  
 * For the first `cd`, we are testing a file. In this case, we are trying to `cd` into `Hello.java` The output that is returned is `bash: cd: Hello.java: Not a directory`.
-  
- - This is an ERROR because cd stands for "change directory" meaning that the next object in the command line must be a directory.
-   
+  - This is an ERROR because cd stands for "change directory" meaning that the next object in the command line must be a directory.
 * For the first `ls` we are trying, it just simple lists the file name given. The command was `ls Hello.java` and what was returned was `Hello.java` on the following line.
-  
- - This is not an error because a the given file is listed. (Meaning that it exists in that current directory)
-
+  - This is not an error because a the given file is listed. (Meaning that it exists in that current directory)
 * For the first `cat`, it simply lists all the lines of code in the file given.
+  - This is not an error because it simple shows all the lines of code in the given file.
 
- - This is not an error because it simple shows all the lines of code in the given file.
 
 
 ![Image](CSE15_Lab1_SC3.jpg)
