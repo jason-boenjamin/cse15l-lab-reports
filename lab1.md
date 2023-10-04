@@ -36,5 +36,6 @@
  - This is not an error because a the given file is listed. (Meaning that it exists in that current directory)
 * For the first "cat", it simply lists all the lines of code in the file given.
  - This is not an error because it simple shows all the lines of code in the given file.
+
    
 ![Image](CSE15_Lab1_SC3.jpg)
