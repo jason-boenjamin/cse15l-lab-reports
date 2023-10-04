@@ -37,7 +37,12 @@
 <br>
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 **3. This is the third step for `cd`, `ls`, and `cat` with a path to a file as an argument.**
 **The working directory for this problem is `/home/lecture1`**
