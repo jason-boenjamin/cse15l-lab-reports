@@ -1,7 +1,7 @@
 # Lab Report 1 
 ## By Jason Boenjamin
 
-1. **This is the first step for cd, ls, and cat with no arguments.**
+1. **This is the first step for cd, ls, and cat with no arguments.**\n
 **The working directory for this problem is "/home"**
 
 * For the first "cd", it changes the directory to the home directory
