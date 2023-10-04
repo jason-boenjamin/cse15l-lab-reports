@@ -42,5 +42,7 @@
 
  - This is not an error because it simple shows all the lines of code in the given file.
 
-   
+4. asdfasdf
+* asdfasdf
+  - asdf
 ![Image](CSE15_Lab1_SC3.jpg)
