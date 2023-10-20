@@ -1,6 +1,6 @@
 # Lab Report 2
 ## By Jason Boenjamin
-
+### Part 1
 <br>
 This lab report is about Servers and SSH Keys.
 <br>
