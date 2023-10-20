@@ -2,4 +2,4 @@
 ## By Jason Boenjamin
 
 
-![Image](CSE15_Lab2_SC2.png)
+![Image](CSE15_Lab2_SC1.png)
