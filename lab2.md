@@ -7,4 +7,4 @@ This lab report is about Servers and SSH Keys.
 
 ![Image](CSE15_Lab2_SC1.png)
 - This screenshot displays what the user will see when they enter the website.
-- ![Website Link At The Time](http://ieng-202.ucsd.edu:7034)
+- [Website Link At The Time](http://ieng-202.ucsd.edu:7034)
