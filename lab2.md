@@ -29,3 +29,19 @@ This lab report is about Servers and SSH Keys.
 
 
 ### Part 2
+
+Using command line to show path to *private* and *public* key.
+
+![Image](CSE15_Lab2_SC4.png)
+* The screenshot above shows the path to my *private* key using `ls` and `cat` for verification.
+  
+![Image](CSE15_Lab2_SC5.png)
+* The screenshot above shows the path to my *public* key using `ls` and `cat` for verification.
+  
+![Image](CSE15_Lab2_SC6.png)
+* The screenshot above shows that I can log into ieng6 for this course without being asked for a password
+
+### Part 3
+Concluding statements:
+I've learned a lot these past two weeks. I finally learned how to connect to my ieng6 account without a password! A week ago, I didn't know where to put my public key for my CS30 ieng6 account. After this lab, I was able to place my public keys for all my personal devices. The convenience is amazing!
+
