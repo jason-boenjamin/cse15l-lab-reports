@@ -21,5 +21,6 @@ This lab report is about Servers and SSH Keys.
 
 
 <br>
-- The relevant arguments for both screenshots, method `handleRequest(URI url)` is "url".
+- The relevant arguments for both screenshots, method `handleRequest(URI url)` is "URL".
+<br>
 - The values of url change the request because you can either `/add-messages` or display the starting screen.
