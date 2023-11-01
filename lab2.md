@@ -9,9 +9,42 @@ This lab report is about Servers and SSH Keys.
 - This screenshot displays what the user will see when they enter the website.
 - [Website Link At The Time](http://ieng-202.ucsd.edu:7034)
 
+Code for string server:
+
+```
+  private ArrayList <String> array = new ArrayList<String>();
+
+        public String handleRequest(URI url){
+                String response = "";
+                if(url.getPath().equals("/"))
+                {
+                        String hold = "Jason's String Server";
+                        hold += "\nUse /add-messages to add a word\n ";
+                        response = hold;
+                }
+                else if(url.getPath().contains("/add-message")){
+                        String[] parameters = url.getQuery().split("=");
+                        if(parameters[0].equals("s"))
+                        {
+                                array.add(parameters[1]);
+                                for(int i = 0; i < array.size(); i++){
+                                        response += (i+1) + ". " + array.get(i) + "\n";
+                                }
+
+                        }
+                }
+                else{
+                        return "404 Not Found!";
+                }
+        return response;
+        }
+```
+
+
 ![Image](CSE15_Lab2_SC2.png)
 - For this first screenshot, we are specifically using `/add-messages?s=Hello`.
- - The methods that are called in my code are  `handleRequest(URI url)`. The outcome of the server depends on what url is placed in. In this case, "Hello" is the query that needs to be added to the website.
+ - The methods in my code are  `handleRequest(URI url)`. The outcome of the server depends on what url is placed in. In this case, "Hello" is the query that needs to be added to the website.
+ - From the code given from above, the parameter `(URI url)` takes the url and extracts key information from it. For example, in the first screenshot, I am checking to see if the path has the root with just the `\`. However, in the next screenshot, I am checking to see if the `url` path contains the `/add-messages`. If the `/add-messages` is there, then I will further break down to see if the query `s` is followed by the `=` and a string.
  - The server updates and the website now prints `1. Hello`, since "Hello" is the first string entered.
 
 ![Image](CSE15_Lab2_SC3.png)
