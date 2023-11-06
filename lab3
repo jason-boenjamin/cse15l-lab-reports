@@ -1,0 +1,21 @@
+# Lab Report 3
+## By Jason Boenjamin
+### This lab report is about Bugs and Commands (Week 5)
+
+<br>
+Part 1 - Bugs
+<br>
+- Failure-inducing input for the ArrayTest buggy program:
+```
+@Test
+public void testReverseInPlace() {
+int[] input1 = {1,2, 3, 4 };
+ArrayExamples.reverseInPlace(input1);
+assertArrayEquals(new int[]{4,3,2,1 }, input1);
+}
+
+```
+
+<br>
+Part 2 - Researching Commands
+<br>
