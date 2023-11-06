@@ -28,7 +28,7 @@ double [] input1 = {1,2,3,4};
 double answer = 3;
 assertEquals(answer, ArrayExamples.averageWithoutLowest(input1),0.00001);
 ```
-Output:
+
 
 
 }
@@ -43,6 +43,6 @@ Part 2 - Researching Commands
 grep - i "1" *.java
 ```
 - Looks for every single instance of the given string "1" in all .java files in the current directory.
-![Image](CSE15L-LAB3-IMG1.png)
+![Image](CS15L-LAB3-IMG1.png)
 
 
