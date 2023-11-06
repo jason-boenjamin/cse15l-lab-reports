@@ -42,7 +42,13 @@ Part 2 - Researching Commands
 ```
 grep - i "1" *.java
 ```
-- Looks for every single instance of the given string "1" in all .java files in the current directory.
+  - Looks for every single instance of the given string "1" in all .java files in the current directory.
 ![Image](CS15L-LAB3-IMG1.png)
 
+- Command 2
+```
+[cs15lfa23ae@ieng6-201]:lab3:493$ grep -c 1 ListExamples.java
+11
+[cs15lfa23ae@ieng6-201]:lab3:494$
+```
 
