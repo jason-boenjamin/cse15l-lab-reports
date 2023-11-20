@@ -188,7 +188,7 @@ The only source I have used is the *man* page when using grep
 ./technical/government/Post_Rate_Comm/Mitchell_RMVancouver.txt:195:such things as the payment of taxes, the need for a return on
 ```
 
-- As shown above, using the `grep -rn` command recursively searches through the given directory and returns the line number where it found the given string. In this case, the given string is "taxes". As you can see there's only one instance in "biomed" and many instances in the "government" directory. I can see this being exceptionally useful for finding signatures, given a name.
+- As shown above, using the `grep -rn` command recursively searches through the given directory and returns the path, line number and the contents of the line where it found the given string. In this case, the given string is "taxes". As you can see there's only one instance in "biomed" and many instances in the "government" directory. I can see this being exceptionally useful for finding signatures, given a name.
 
 - ***Command 2, two examples***
 ```
@@ -293,3 +293,87 @@ The only source I have used is the *man* page when using grep
 ./technical/biomed/gb-2003-4-6-r37.txt:          transcript levels were assessed using DNA microarrays.
 ```
 - As shown above, the use of `grep -rm` followed by the number of lines will search for the given string through the given directory recursively, for that specific number of lines. The output shows the working directory, followed by the entire line that word is in. For the first one, I made it check for "taxes" within the first 10 lines of the working directory for `./technical/government`. For the next one, I made it search through 5 lines for the word "DNA microarrays' in the working directory `./technical/biomed`.
+
+- ***Command 3, two examples***
+```
+[cs15lfa23ae@ieng6-201]:docsearch:662$ grep -rc "John" ./technical/911report/
+./technical/911report/chapter-1.txt:4
+./technical/911report/chapter-10.txt:1
+./technical/911report/chapter-11.txt:1
+./technical/911report/chapter-12.txt:0
+./technical/911report/chapter-13.1.txt:0
+./technical/911report/chapter-13.2.txt:17
+./technical/911report/chapter-13.3.txt:19
+./technical/911report/chapter-13.4.txt:28
+./technical/911report/chapter-13.5.txt:32
+./technical/911report/chapter-2.txt:0
+./technical/911report/chapter-3.txt:8
+./technical/911report/chapter-5.txt:0
+./technical/911report/chapter-6.txt:6
+./technical/911report/chapter-7.txt:1
+./technical/911report/chapter-8.txt:13
+./technical/911report/chapter-9.txt:0
+./technical/911report/preface.txt:0
+```
+```
+[cs15lfa23ae@ieng6-201]:docsearch:671$ grep -rc "fire" ./technical/911report/
+./technical/911report/chapter-1.txt:1
+./technical/911report/chapter-10.txt:1
+./technical/911report/chapter-11.txt:1
+./technical/911report/chapter-12.txt:0
+./technical/911report/chapter-13.1.txt:4
+./technical/911report/chapter-13.2.txt:3
+./technical/911report/chapter-13.3.txt:1
+./technical/911report/chapter-13.4.txt:2
+./technical/911report/chapter-13.5.txt:57
+./technical/911report/chapter-2.txt:1
+./technical/911report/chapter-3.txt:6
+./technical/911report/chapter-5.txt:1
+./technical/911report/chapter-6.txt:4
+./technical/911report/chapter-7.txt:1
+./technical/911report/chapter-8.txt:0
+./technical/911report/chapter-9.txt:145
+./technical/911report/preface.txt:0
+```
+- As shown above, the use of `grep -rc` is used to suppress the output and simply searches recursively through the given directory and return the number of times the given string is in each file. This can be helpful when looking through police files and finding specific names. This can especially helpful in the second instance, when searching the reasoning why 911 was called. `-c` supresses the output and only gives the working directory, the file name, and count.
+
+- ***Command 4, one example***
+
+```
+[cs15lfa23ae@ieng6-201]:docsearch:676$ grep -rn "murder" ./technical/911report/
+./technical/911report/chapter-2.txt:12:                declared war against God and his messenger, they called for the murder of any
+./technical/911report/chapter-2.txt:156:                even unprovoked mass murder as righteous defense of an embattled faith. Many
+./technical/911report/chapter-2.txt:273:                as unbelievers," because of their readiness to demonize and murder those with whom
+./technical/911report/chapter-2.txt:275:                like most other human beings, are repelled by mass murder and barbarism whatever
+./technical/911report/chapter-2.txt:378:                Jersey City, he distributed messages calling for the murder of unbelievers.
+./technical/911report/chapter-3.txt:1634:                tracking down Mir Amal Kansi, the Pakistani gunman who had murdered two CIA
+./technical/911report/chapter-7.txt:939:                suspect criminal behavior, let alone a terrorist plot to commit mass murder.
+```
+- As shown above, `grep -rn` followed by the given string to search for and the directory recursively searches for the given string. The terminal output is the directory, filename, line number, and the contents of that line. This is most likely the best command to use since it tells you the most important information you need.
+
+- ***Command 5, one example***
+```
+[cs15lfa23ae@ieng6-201]:docsearch:677$ grep -rl "DNA replication" ./technical/biomed/
+./technical/biomed/1471-2091-2-13.txt
+./technical/biomed/1471-2091-3-13.txt
+./technical/biomed/1471-2091-3-23.txt
+./technical/biomed/1471-2121-2-11.txt
+./technical/biomed/1471-2156-4-9.txt
+./technical/biomed/1471-2164-3-15.txt
+./technical/biomed/1471-2164-3-18.txt
+./technical/biomed/1471-2180-3-10.txt
+./technical/biomed/1471-2202-4-6.txt
+./technical/biomed/1471-2334-2-7.txt
+./technical/biomed/1471-2407-1-6.txt
+./technical/biomed/1471-2431-2-12.txt
+./technical/biomed/1472-6807-3-1.txt
+./technical/biomed/1475-2875-1-5.txt
+./technical/biomed/1476-4598-1-3.txt
+./technical/biomed/ar321.txt
+./technical/biomed/ar774.txt
+./technical/biomed/bcr284.txt
+./technical/biomed/gb-2002-3-12-research0087.txt
+./technical/biomed/gb-2002-3-4-research0019.txt
+./technical/biomed/gb-2003-4-7-r46.txt
+```
+- As shown above, the command `grep -rl` followed by the given string and the directory recursively searches for the string and suppresses all output except for the directory and file name it is in. This can be extremely helpful if you just need the list of all the files that contain the string.
