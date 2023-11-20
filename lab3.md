@@ -20,6 +20,7 @@
 ```
 
 - ***Non-failure inducing input***
+  
 ```
         @Test
         public void testReverseInPlace() {
@@ -36,6 +37,7 @@
 
 
 - ***CODE BEFORE CHANGE***
+  
 ```
   // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
@@ -46,6 +48,7 @@
 ```
 
 - ***CODE AFTER CHANGE***
+
 ```
   // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
@@ -58,6 +61,7 @@
 ```
 
 - ***Output after code change***
+  
 ![Image](CSE15_Lab3_SC3.png)
 
 - ***Description of change***
@@ -72,7 +76,9 @@ The code before the fix would swap from the end to the beginning. The problem is
 <br>
 
 The only source I have used is the *man* page when using grep, as it gives an in depth description of `-n`, `-m`, `-c`, `-l`
+
 - ***Command 1, two examples***
+  
 ```
 [cs15lfa23ae@ieng6-201]:docsearch:646$ grep -rn "taxes" ./technical/biomed
 ./technical/biomed/gb-2002-3-9-research0046.txt:42:        data-communication syntaxes for microarray experiments
@@ -191,6 +197,7 @@ The only source I have used is the *man* page when using grep, as it gives an in
 - As shown above, using the `grep -rn` command recursively searches through the given directory and returns the path, line number and the contents of the line where it found the given string. In this case, the given string is "taxes". As you can see there's only one instance in "biomed" and many instances in the "government" directory. I can see this being exceptionally useful for finding signatures, given a name.
 
 - ***Command 2, two examples***
+  
 ```
 [cs15lfa23ae@ieng6-201]:docsearch:650$ grep -rm 10 "taxes" ./technical/government
 ./technical/government/About_LSC/commission_report.txt:taxes for H-2A workers. See March Testimony at 157 (testimony of
@@ -292,9 +299,11 @@ The only source I have used is the *man* page when using grep, as it gives an in
 ./technical/biomed/gb-2003-4-6-r37.txt:          DNA microarrays of approximately 43,000 cDNAs
 ./technical/biomed/gb-2003-4-6-r37.txt:          transcript levels were assessed using DNA microarrays.
 ```
+
 - As shown above, the use of `grep -rm` followed by the number of lines will search for the given string through the given directory recursively, for that specific number of lines. The output shows the working directory, followed by the entire line that word is in. For the first one, I made it check for "taxes" within the first 10 lines of the working directory for `./technical/government`. For the next one, I made it search through 5 lines for the word "DNA microarrays' in the working directory `./technical/biomed`.
 
 - ***Command 3, two examples***
+  
 ```
 [cs15lfa23ae@ieng6-201]:docsearch:662$ grep -rc "John" ./technical/911report/
 ./technical/911report/chapter-1.txt:4
@@ -315,6 +324,7 @@ The only source I have used is the *man* page when using grep, as it gives an in
 ./technical/911report/chapter-9.txt:0
 ./technical/911report/preface.txt:0
 ```
+
 ```
 [cs15lfa23ae@ieng6-201]:docsearch:671$ grep -rc "fire" ./technical/911report/
 ./technical/911report/chapter-1.txt:1
@@ -335,6 +345,7 @@ The only source I have used is the *man* page when using grep, as it gives an in
 ./technical/911report/chapter-9.txt:145
 ./technical/911report/preface.txt:0
 ```
+
 - As shown above, the use of `grep -rc` is used to suppress the output and simply searches recursively through the given directory and return the number of times the given string is in each file. This can be helpful when looking through police files and finding specific names. This can especially helpful in the second instance, when searching the reasoning why 911 was called. `-c` supresses the output and only gives the working directory, the file name, and count.
 
 - ***Command 4, one example***
@@ -350,9 +361,11 @@ The only source I have used is the *man* page when using grep, as it gives an in
 ./technical/biomed/1477-7827-1-9.txt:          of BMPR-IA mRNA were expressed as it underwent
 ./technical/biomed/1477-7827-1-9.txt:          luteinization and luteolysis. In the theca, BMPR-IA mRNA
 ```
+
 - As shown above, `grep -r1` followed by the given string to search for and the directory recursively searches for the given string. The terminal output is the directory, filename,and the contents of that line, without the line number. This can be useful for smaller directories, if only the file names matter.
 
 - ***Command 5, one example***
+  
 ```
 [cs15lfa23ae@ieng6-201]:docsearch:677$ grep -rl "DNA replication" ./technical/biomed/
 ./technical/biomed/1471-2091-2-13.txt
