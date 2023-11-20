@@ -3,7 +3,9 @@
 ### This lab report is about Bugs and Commands (Week 5)
 
 <br>
-Part 1 - Bugs
+
+### Part 1 - Bugs
+
 <br>
 
 - ***Failure-inducing input for the ArrayExamples buggy program***
@@ -67,8 +69,11 @@ The code before the fix would swap from the end to the beginning. The problem is
 
 
 <br>
-Part 2 - Researching Commands
+
+### Part 2 - Researching commands
+
 <br>
+
 
 
 - Command 1
