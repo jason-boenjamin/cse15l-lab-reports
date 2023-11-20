@@ -5,7 +5,8 @@
 <br>
 Part 1 - Bugs
 <br>
-- Failure-inducing input for the ArrayExamples buggy program:
+- ***Failure-inducing input for the ArrayExamples buggy program: ***
+
 ```
         @Test
         public void testReverseInPlace2(){
@@ -15,7 +16,17 @@ Part 1 - Bugs
         }
 ```
 
-- Output
+- ***Non-failure inducing input***
+```
+        @Test
+        public void testReverseInPlace() {
+            int[] input1 = { 3 };
+            ArrayExamples.reverseInPlace(input1);
+            assertArrayEquals(new int[]{ 3 }, input1);
+        }
+```
+
+- ***Output (failure inducing input test output and non-failure inducing input test output)***
 
 ![Image](CSE15_Lab3_SC1.png)
 
@@ -24,11 +35,13 @@ We fixed the test case and we compiled without errors. Then, my lab partner foun
 would break if there were duplicates of the lowest number.
 The symptom that we are testing for is invalid output.
 
-- Successful Input:
+- ***Successful Input:***
 ```
-double [] input1 = {1,2,3,4};
-double answer = 3;
-assertEquals(answer, ArrayExamples.averageWithoutLowest(input1),0.00001);
+  @Test
+  public void testReversed() {
+    int[] input1 = { };
+    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+  }
 ```
 
 
