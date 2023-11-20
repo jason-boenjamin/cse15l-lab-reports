@@ -71,7 +71,7 @@ The code before the fix would swap from the end to the beginning. The problem is
 
 <br>
 
-The only source I have used is the *man* page when using grep
+The only source I have used is the *man* page when using grep, as it gives an in depth description of `-n`, `-m`, `-c`, `-l`
 - ***Command 1, two examples***
 ```
 [cs15lfa23ae@ieng6-201]:docsearch:646$ grep -rn "taxes" ./technical/biomed
@@ -340,16 +340,17 @@ The only source I have used is the *man* page when using grep
 - ***Command 4, one example***
 
 ```
-[cs15lfa23ae@ieng6-201]:docsearch:676$ grep -rn "murder" ./technical/911report/
-./technical/911report/chapter-2.txt:12:                declared war against God and his messenger, they called for the murder of any
-./technical/911report/chapter-2.txt:156:                even unprovoked mass murder as righteous defense of an embattled faith. Many
-./technical/911report/chapter-2.txt:273:                as unbelievers," because of their readiness to demonize and murder those with whom
-./technical/911report/chapter-2.txt:275:                like most other human beings, are repelled by mass murder and barbarism whatever
-./technical/911report/chapter-2.txt:378:                Jersey City, he distributed messages calling for the murder of unbelievers.
-./technical/911report/chapter-3.txt:1634:                tracking down Mir Amal Kansi, the Pakistani gunman who had murdered two CIA
-./technical/911report/chapter-7.txt:939:                suspect criminal behavior, let alone a terrorist plot to commit mass murder.
+[cs15lfa23ae@ieng6-201]:docsearch:679$ grep -rw "BMPR-IA mRNA" ./technical/biomed/
+./technical/biomed/1477-7827-1-9.txt:          Expression of BMPR-IA mRNA
+./technical/biomed/1477-7827-1-9.txt:          The BMPR-IA mRNA was ubiquitously expressed in the
+./technical/biomed/1477-7827-1-9.txt:          The potential importance of oocyte BMPR-IA mRNA is
+./technical/biomed/1477-7827-1-9.txt:          primary follicle development the levels of BMPR-IA mRNA
+./technical/biomed/1477-7827-1-9.txt:          of the dominant follicle, BMPR-IA mRNA was abundantly
+./technical/biomed/1477-7827-1-9.txt:          BMPR-IA mRNA was highly expressed (Fig. 7I,7J).
+./technical/biomed/1477-7827-1-9.txt:          of BMPR-IA mRNA were expressed as it underwent
+./technical/biomed/1477-7827-1-9.txt:          luteinization and luteolysis. In the theca, BMPR-IA mRNA
 ```
-- As shown above, `grep -rn` followed by the given string to search for and the directory recursively searches for the given string. The terminal output is the directory, filename, line number, and the contents of that line. This is most likely the best command to use since it tells you the most important information you need.
+- As shown above, `grep -r1` followed by the given string to search for and the directory recursively searches for the given string. The terminal output is the directory, filename,and the contents of that line, without the line number. This can be useful for smaller directories, if only the file names matter.
 
 - ***Command 5, one example***
 ```
