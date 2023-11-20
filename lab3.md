@@ -7,16 +7,18 @@ Part 1 - Bugs
 <br>
 - Failure-inducing input for the ArrayExamples buggy program:
 ```
-double [] input1 = {1,2,3,4,-1,-1};
-double answer = 3;
-assertEquals(answer, ArrayExamples.averageWithoutLowest(input1),0.00001);
+        @Test
+        public void testReverseInPlace2(){
+        int [] input1 = {1,2,3,4};
+        ArrayExamples.reverseInPlace(input1);
+        assertArrayEquals(new int[]{4,3,2,1},input1);
+        }
 ```
+
 - Output
-```
-There was 1 failure:
-1) testAverageWithoutLowest(ArrayTests)
-java.lang.AssertionError: expected:<3.0> but was:<2.0>
-```
+
+![Image](CSE15_Lab3_SC1.png)
+
 - The first test that we implemented was a simple {1,2,3,4}, where the expected answer was 3.0.
 We fixed the test case and we compiled without errors. Then, my lab partner found that the program
 would break if there were duplicates of the lowest number.
