@@ -5,7 +5,8 @@
 <br>
 Part 1 - Bugs
 <br>
-- ***Failure-inducing input for the ArrayExamples buggy program: ***
+
+- ***Failure-inducing input for the ArrayExamples buggy program***
 
 ```
         @Test
@@ -30,11 +31,29 @@ Part 1 - Bugs
 
 ![Image](CSE15_Lab3_SC1.png)
 
-- The first test that we implemented was a simple {1,2,3,4}, where the expected answer was 3.0.
-We fixed the test case and we compiled without errors. Then, my lab partner found that the program
-would break if there were duplicates of the lowest number.
-The symptom that we are testing for is invalid output.
 
+- ***CODE BEFORE CHANGE***
+```
+  // Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+
+- ***CODE AFTER CHANGE***
+```
+  // Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length-i-1];
+      arr[arr.length-i-1] = temp;
+    }
+  }
+```
+  
 - ***Successful Input:***
 ```
   @Test
@@ -43,10 +62,10 @@ The symptom that we are testing for is invalid output.
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
   }
 ```
+- ***Deescription of change***
+The code before the fix would swap from the end to the beginning. The problem is that it wouldn't keep every value because it had already been swapped. To fix this, I needed to use a swap variable called *temp* in order to properly but the array list in reverse order.
 
 
-
-}
 
 <br>
 Part 2 - Researching Commands
