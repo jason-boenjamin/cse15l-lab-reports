@@ -27,11 +27,6 @@
             ArrayExamples.reverseInPlace(input1);
             assertArrayEquals(new int[]{ 3 }, input1);
         }
-  @Test
-  public void testReversed() {
-    int[] input1 = { };
-    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
-  }
 
 ```
 
@@ -61,10 +56,12 @@
     }
   }
 ```
-  
 
-- ***Deescription of change***
-The code before the fix would swap from the end to the beginning. The problem is that it wouldn't keep every value because it had already been swapped. To fix this, I needed to use a swap variable called *temp* in order to properly but the array list in reverse order.
+- ***Output after code change***
+![Image](CSE15_Lab3_SC3.png)
+
+- ***Description of change***
+The code before the fix would swap from the end to the beginning. The problem is that it wouldn't keep every value because it had already been swapped, this of course is the bug. The symptom is the terminal output we see. Through Junit, we see that the actual output does not match the expected output, until we fix it. To fix this, I needed to use a swap variable called *temp* in order to properly but the array list in reverse order.
 
 
 
