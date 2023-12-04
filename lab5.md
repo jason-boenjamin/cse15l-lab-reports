@@ -9,6 +9,7 @@
 <br>
 
 Student: I have spent hours trying to debug my code for Lab 7 and the code will not compile. Attached below is the output but when I type `bash test.sh`. I don't know where to begin but I feel as though the code for my Java files and script are correct. One guess I have could be I am not initializing the right variable in my java file. I will attach them below as well. Please reach out to me as soon as possible. Thank you!
+
 ![student post 1](CS15L_LAB5_SC1.png)
 
 Screenshot showing  symptom
@@ -45,15 +46,15 @@ TA: Have you tried going to the lines that Junit specifies? Also, have you looke
 <br>
 Student: I took your advice in regards to reading the terminal output where it states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". I successfully removed the ".java" at the end of ListExamplesTests. The bug was that I tried to run the command `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests.java`. I forgot that in this step of compilation, I must call `ListExamplesTest`. That was my careless mistake when creating my test script and I have attached the screenshot below. 
 
-![BUG1FIX]("CS15L_LAB5_SC5.png")
+![BUG1FIX](CS15L_LAB5_SC5.png)
 
 <br>
 
 After the first fix, I can see that the script properly compiles as shown in the screenshot below. Then I took your advice and look through my ListExamples.Java file where I made the mistake of copying a chunk of code. As shown below, I have fix the changes by changing index1 to index2 and list1 to list2. Thank you so much for your help.
 
-![BUG2PROMPT]("CS15L_LAB5_SC6.png")
-![Image]("CS15L_LAB5_SC7.png")
-![Image]("CS15L_LAB5_SC8.png")
+![BUG2PROMPT](CS15L_LAB5_SC6.png)
+![Image](CS15L_LAB5_SC7.png)
+![Image](CS15L_LAB5_SC8.png)
 
 
 **file and directory structure**
