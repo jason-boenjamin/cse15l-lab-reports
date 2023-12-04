@@ -115,14 +115,27 @@ public class ListExamplesTests {
 
 
 **TA Response**
-Ask a leading question or suggest a command to try
+<br>
+**TA EdStem Post**
+<br>
+TA: Have you tried going to the lines that Junit specifies? Also, have you looked at the terminal output when you run `bash test.sh` ? I see a line that states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". Once you recheck your "test.sh" file, you can utilize JDB as a way to debug your code, simply type in `javac -g ListExamples.java` followed by `jdb ListExamples`.
+
+**Student's Response**
+<br>
+**Student's post**
+<br>
+
+
 Another screenshot/terminal output displaying what information the student got from trying and a clear description of what the bug is.
 
-A response from a TA asking a leading question or suggesting a command to try (To be clear, you are mimicking a TA here.)
 Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
 
-**NEEDED**
-file and directory structure
+
+**file and directory structure**
+├── lab7
+│   ├── controller
+│   │   ├── **/*.css
+│   ├── views
 contents of each file before fixing the bug
 The full command lines I ran to trigger the bug
 A description of what to edit to fix the bug
