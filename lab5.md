@@ -37,7 +37,7 @@ ListExamplesTests.java file
 <br>
 **TA EdStem Post**
 <br>
-TA: Have you tried going to the lines that Junit specifies? Also, have you looked at the terminal output when you run `bash test.sh` ? I see a line that states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". Once you recheck your "test.sh" file, you can utilize JDB as a way to debug your code, simply type in `javac -g *.java` followed by `jdb ListExamples`.
+TA: Have you tried going to the lines that Junit specifies? Also, have you looked at the terminal output when you run `bash test.sh` ? I see a line that states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". Once you recheck your "test.sh" file, you can look through your other files to see any other errors.
 
 **Student's Response**
 <br>
@@ -49,9 +49,12 @@ Student: I took your advice in regards to reading the terminal output where it s
 
 <br>
 
-After the first fix, I can see that the script properly compiles as shown in the screenshot below
+After the first fix, I can see that the script properly compiles as shown in the screenshot below. Then I took your advice and look through my ListExamples.Java file where I made the mistake of copying a chunk of code. As shown below, I have fix the changes by changing index1 to index2 and list1 to list2. Thank you so much for your help.
 
 ![BUG2PROMPT]("CS15L_LAB5_SC6.png")
+![Image]("CS15L_LAB5_SC7.png")
+![Image]("CS15L_LAB5_SC8.png")
+
 
 **file and directory structure**
 
