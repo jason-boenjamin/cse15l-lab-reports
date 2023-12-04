@@ -50,6 +50,8 @@ Another screenshot/terminal output showing what information the student got from
 
 
 **file and directory structure**
+
+```
 ├── lab7
 │   ├── lib
 │   │   ├── hamcrest-core-1.3.jar
@@ -60,6 +62,7 @@ Another screenshot/terminal output showing what information the student got from
 │   ├── ListExamplesTest.java
 │   ├── StringChecker.class
 │   ├── test.sh
+```
 
 **Contents of each file before fixing the bug**
 
