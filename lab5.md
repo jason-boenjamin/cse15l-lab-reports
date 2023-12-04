@@ -37,7 +37,7 @@ ListExamplesTests.java file
 <br>
 **TA EdStem Post**
 <br>
-TA: Have you tried going to the lines that Junit specifies? Also, have you looked at the terminal output when you run `bash test.sh` ? I see a line that states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". Once you recheck your "test.sh" file, you can utilize JDB as a way to debug your code, simply type in `javac -g ListExamples.java` followed by `jdb ListExamples`.
+TA: Have you tried going to the lines that Junit specifies? Also, have you looked at the terminal output when you run `bash test.sh` ? I see a line that states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". Once you recheck your "test.sh" file, you can utilize JDB as a way to debug your code, simply type in `javac -g *.java` followed by `jdb ListExamples`.
 
 **Student's Response**
 <br>
@@ -47,7 +47,11 @@ Student: I took your advice in regards to reading the terminal output where it s
 
 ![BUG1FIX]("CS15L_LAB5_SC5.png")
 
+<br>
 
+After the first fix, I can see that the script properly compiles as shown in the screenshot below
+
+![BUG2PROMPT]("CS15L_LAB5_SC6.png")
 
 **file and directory structure**
 
@@ -174,7 +178,7 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 `bash<space>test.sh<enter>`
 
 - Simply trying to run the test script would trigger the bug and JUnit actively displays where the first error occurs.
-- 
+  
 <br>
 
 **A description of what to edit to fix the bug**
@@ -192,7 +196,16 @@ Fix for bug 1:
 
 Fix for bug 2:
 
-- After we fix our first bug, 
+- After we fix our first bug, we have reduced our problem to either ListExamplesTest.java or ListExamples.java. The ListExamplesTest.java was a file given with the proper tests so we know that the error lies in ListExamples.java.
+- First, we use the command `vim<space>ListExamples.java
+- Then, we use the down arrow key <down-arrow-key> 42 times until line 42 is reached
+- Notice that lines 37-40 are identical to lines 42-46. This is because the user mistakenly copied and pasted lines 37-40
+- Press <i> to go into insert mode and change index1 to index 2 and list1 to list2.
+- Press the <down-arrow-key> again to go to line 43.
+- Change list1 to list2 and index1 to index2
+- Press the <down-arrow-key> to go to line 45
+- Change index1 to index2
+- Finally, press <esc> to go to command mode and enter <:><w><q> to write to and quit
 
 
 
