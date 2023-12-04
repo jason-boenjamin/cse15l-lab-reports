@@ -43,10 +43,10 @@ TA: Have you tried going to the lines that Junit specifies? Also, have you looke
 <br>
 **Student's post**
 <br>
-Student:
+Student: I took your advice in regards to reading the terminal output where it states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". I successfully removed the ".java" at the end of ListExamplesTests. The bug was that I tried to run the command `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests.java`. I forgot that in this step of compilation, I must call `ListExamplesTest`. That was my careless mistake when creating my test script and I have attached the screenshot below. 
 
+![BUG1FIX]("CS15L_LAB5_SC5.png")
 
-Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
 
 
 **file and directory structure**
@@ -171,12 +171,28 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 
 **The full command lines I ran to trigger the bug**
 
+`bash<space>test.sh<enter>`
+
+- Simply trying to run the test script would trigger the bug and JUnit actively displays where the first error occurs.
+- 
 <br>
 
 **A description of what to edit to fix the bug**
 
 <br>
 
+Fix for bug 1:
+
+- For the first bug, JUnit detected that there is no class found.
+- First, we do the command `vim<space>test.sh<enter>`
+- Then, we use the arrow key <down-arrow> to go to the second line, where the first error is
+- Then, we use the right arrow key until we hit the end of the second line <right-arrow-key>
+- Next, we press <i> to enter insert mode where we press backspace 5 times. <back-space><back-space><back-space><back-space><back-space>
+- Finally, we press <esc> to enter command mode and then <:><w><q> to (w)rite/save to and (q)uit
+
+Fix for bug 2:
+
+- After we fix our first bug, 
 
 
 
