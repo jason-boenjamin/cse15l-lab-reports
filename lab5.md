@@ -16,11 +16,51 @@ Screenshot showing  symptom
 <br>
 test.sh file
 <br>
+![test.sh](CS15L_LAB5_SC2.png)
+<br>
 
-```
-javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
-java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests.java
-```
+ListExamples.java file
+<br>
+![test.sh](CS15L_LAB5_SC4.png)
+
+<br>
+
+ListExamplesTests.java file
+
+![test.sh](CS15L_LAB5_SC3.png)
+<br>
+
+
+**TA Response**
+<br>
+**TA EdStem Post**
+<br>
+TA: Have you tried going to the lines that Junit specifies? Also, have you looked at the terminal output when you run `bash test.sh` ? I see a line that states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". Once you recheck your "test.sh" file, you can utilize JDB as a way to debug your code, simply type in `javac -g ListExamples.java` followed by `jdb ListExamples`.
+
+**Student's Response**
+<br>
+**Student's post**
+<br>
+Student:
+
+
+Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
+
+
+**file and directory structure**
+├── lab7
+│   ├── lib
+│   │   ├── hamcrest-core-1.3.jar
+│   │   ├── lab7/lib/junit-4.13.2.jar
+│   ├── ListExamples.class
+│   ├── ListExamples.java
+│   ├── ListExamplesTest.class
+│   ├── ListExamplesTest.java
+│   ├── StringChecker.class
+│   ├── test.sh
+
+**Contents of each file before fixing the bug**
+
 <br>
 
 ListExamples.java file
@@ -81,6 +121,7 @@ class ListExamples {
 
 ```
 
+
 <br>
 
 ListExamplesTests.java file
@@ -113,43 +154,23 @@ public class ListExamplesTests {
 
 <br>
 
-
-**TA Response**
 <br>
-**TA EdStem Post**
-<br>
-TA: Have you tried going to the lines that Junit specifies? Also, have you looked at the terminal output when you run `bash test.sh` ? I see a line that states "`java.lang.IllegalArgumentException: Could not find class [ListExamplesTest.java]`". Once you recheck your "test.sh" file, you can utilize JDB as a way to debug your code, simply type in `javac -g ListExamples.java` followed by `jdb ListExamples`.
-
-**Student's Response**
-<br>
-**Student's post**
+test.sh file
 <br>
 
+```
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests.java
+```
+<br>
 
-Another screenshot/terminal output displaying what information the student got from trying and a clear description of what the bug is.
+**The full command lines I ran to trigger the bug**
 
-Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
+<br>
 
+**A description of what to edit to fix the bug**
 
-**file and directory structure**
-├── lab7
-│   ├── controller
-│   │   ├── **/*.css
-│   ├── views
-contents of each file before fixing the bug
-The full command lines I ran to trigger the bug
-A description of what to edit to fix the bug
-
-At the end, all the information needed about the setup including:
-The file & directory structure needed
-The contents of each file before fixing the bug
-The full command line (or lines) you ran to trigger the bug
-A description of what to edit to fix the bug
-**NEED A JAVA AND BASHSCRIPT**
-USE TERMINAL TO DESCRIBE BUG
-DESIGN AN ERROR THAT PRODUCES MORE INTERESTING OUTPUT THAN A SINGLE MESSAGE ABOUT A SYNTAX OR UNBOUND IDENTIFIER ERROR
-
-You should actually set up and run the scenario from your screenshots. It should involve at least a Java file and a bash script. Describing the bug should involve reading some output at the terminal resulting from running one or more commands. Design an error that produces more interesting output than a single message about a syntax or unbound identifier error – showcase some interesting wrong behavior! Feel free to set this up by cloning and breaking some existing code like the grading script or code from class, or by designing something of your own from scratch, etc.
+<br>
 
 
 
