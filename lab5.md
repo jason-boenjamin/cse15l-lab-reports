@@ -7,7 +7,10 @@ Design a debugging scenario, and write your report as a conversation on EdStem. 
 
 The original post from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is. (Don’t actually make the post! Just write the content that would go in such a post)
 
+
 **Student Initial EdStem Post**
+Student: I have spent hours trying to debug my code for Lab 7 and the code will not compile. Attached below is the output but when I type `bash test.sh`. I don't know where to begin but I feel as though the code for my Java files and script are correct. One guess I have could be I am not initializing the right variable in my java file. I will attach them below as well. Please reach out to me as soon as possible. Thank you!
+![student post 1](CS15L_LAB5_SC1.png)
 Screenshot showing  symptom
 Guess at the bug
 
