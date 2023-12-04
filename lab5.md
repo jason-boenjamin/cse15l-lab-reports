@@ -16,7 +16,9 @@ Screenshot showing  symptom
 <br>
 test.sh file
 <br>
+
 ![test.sh](CS15L_LAB5_SC2.png)
+
 <br>
 
 ListExamples.java file
